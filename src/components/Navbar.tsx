@@ -1,16 +1,16 @@
-import { useState, useEffect } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { useDarkMode } from '../hooks/useDarkMode';
-import DarkModeToggle from './DarkModeToggle';
-import MobileMenu from './MobileMenu';
+import { useState, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { Menu } from "lucide-react";
+import { useDarkMode } from "../hooks/useDarkMode";
+import DarkModeToggle from "./DarkModeToggle";
+import MobileMenu from "./MobileMenu";
 
 const navLinks = [
-  { to: '/', label: 'Home' },
-  { to: '/portfolio/places', label: 'Portfolio' },
-  { to: '/about', label: 'About' },
-  { to: '/gear', label: 'Gear' },
-  { to: '/contact', label: 'Contact' },
+  { to: "/", label: "Home" },
+  { to: "/portfolio/places", label: "Portfolio" },
+  { to: "/about", label: "About" },
+  { to: "/gear", label: "Gear" },
+  { to: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -21,8 +21,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -34,8 +34,8 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-[var(--bg-primary)] border-b border-[var(--border)] py-3'
-            : 'bg-transparent py-6'
+            ? "bg-[var(--bg-primary)] border-b border-[var(--border)] py-3"
+            : "bg-transparent py-6"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -53,12 +53,12 @@ export default function Navbar() {
               <NavLink
                 key={link.to}
                 to={link.to}
-                end={link.to === '/'}
+                end={link.to === "/"}
                 className={({ isActive }) =>
                   `font-sans text-sm tracking-widest uppercase gold-underline transition-colors duration-300 ${
                     isActive
-                      ? 'text-[var(--gold)]'
-                      : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                      ? "text-[var(--gold)]"
+                      : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
                   }`
                 }
               >
