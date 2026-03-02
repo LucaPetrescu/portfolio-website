@@ -3,6 +3,8 @@
 // Drop images into src/assets/images/places/<location>/ and reference here
 // ─────────────────────────────────────────────────────────────────────────────
 
+import egyptHeroImage from '../assets/images/places/egypt/DSC_3574.jpg';
+
 export interface PortfolioItem {
   id: string;
   title: string;
@@ -371,5 +373,4 @@ export const featuredDestinations: FeaturedDestination[] = [
   },
 ];
 
-export const heroImage =
-  'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85';
+export const heroImage = egyptHeroImage;
