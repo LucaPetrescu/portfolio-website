@@ -117,7 +117,7 @@ export default function HomePage() {
       <HeroSection
         image={heroImage}
         headline="Chasing Light Across the World"
-        subheadline="Cinematic travel photography from Morocco to the Aegean — documentary storytelling through light, shadow, and silence."
+        subheadline="Focusing on portraits, travel and candid moments."
         ctaLabel="Explore Portfolio"
         ctaTo="/portfolio/places"
       />

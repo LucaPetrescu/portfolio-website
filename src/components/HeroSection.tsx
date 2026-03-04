@@ -12,7 +12,6 @@ interface HeroSectionProps {
 
 export default function HeroSection({
   image,
-  headline,
   subheadline,
   ctaLabel = 'View Portfolio',
   ctaTo = '/portfolio/places',
@@ -46,12 +45,9 @@ export default function HeroSection({
         }`}
         style={{ transitionDelay: '300ms' }}
       >
-        <p className="font-sans text-xs tracking-[0.3em] uppercase text-[var(--gold)] mb-6">
-          Cinematic Travel Photography
-        </p>
 
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-white leading-tight mb-6">
-          {headline}
+          Hi, I'm Luca — Candid Photographer
         </h1>
 
         {subheadline && (
