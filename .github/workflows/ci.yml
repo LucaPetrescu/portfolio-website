@@ -28,21 +28,6 @@ jobs:
       - name: Lint
         run: npx eslint src --ext ts,tsx --max-warnings 0
 
-  auto-merge:
-    needs: check
-    runs-on: ubuntu-latest
-    if: github.actor == github.repository_owner && github.event_name == 'pull_request'
-    permissions:
-      pull-requests: write
-      contents: write
-
-    steps:
-      - uses: peter-evans/enable-pull-request-automerge@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          pull-request-number: ${{ github.event.pull_request.number }}
-          merge-method: squash
-
   deploy:
     needs: check
     runs-on: ubuntu-latest
